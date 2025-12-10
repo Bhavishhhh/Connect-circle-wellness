@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Wellness Pastel Palette */
+    --background: 45 100% 97%;
+    --foreground: 240 10% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 25%;
+
+    --primary: 45 100% 82%;
+    --primary-foreground: 240 10% 25%;
+
+    --secondary: 200 100% 90%;
+    --secondary-foreground: 240 10% 25%;
+
+    --muted: 270 60% 95%;
+    --muted-foreground: 240 10% 45%;
+
+    --accent: 150 60% 90%;
+    --accent-foreground: 240 10% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 270 30% 90%;
+    --input: 270 30% 92%;
+    --ring: 270 60% 80%;
+
+    --radius: 1rem;
+
+    /* Custom Mood Colors */
+    --mood-happy: 45 100% 82%;
+    --mood-calm: 200 100% 90%;
+    --mood-stressed: 30 100% 85%;
+    --mood-lonely: 350 100% 91%;
+    --mood-anxious: 270 80% 92%;
+    --mood-neutral: 150 60% 90%;
+
+    /* Gradients */
+    --gradient-welcome: linear-gradient(135deg, hsl(45 100% 95%) 0%, hsl(200 100% 95%) 50%, hsl(270 60% 95%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(45 50% 98%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(270 60% 70% / 0.15);
+    --shadow-glow: 0 0 30px hsl(270 60% 80% / 0.3);
+    --shadow-card: 0 8px 30px -8px hsl(270 60% 70% / 0.2);
+  }
+
+  .dark {
+    --background: 240 10% 10%;
+    --foreground: 45 30% 95%;
+
+    --card: 240 10% 15%;
+    --card-foreground: 45 30% 95%;
+
+    --popover: 240 10% 15%;
+    --popover-foreground: 45 30% 95%;
+
+    --primary: 45 80% 70%;
+    --primary-foreground: 240 10% 10%;
+
+    --secondary: 200 60% 30%;
+    --secondary-foreground: 200 100% 95%;
+
+    --muted: 270 20% 20%;
+    --muted-foreground: 270 20% 70%;
+
+    --accent: 150 40% 25%;
+    --accent-foreground: 150 60% 95%;
+
+    --border: 270 20% 25%;
+    --input: 270 20% 20%;
+    --ring: 270 60% 60%;
+
+    --mood-happy: 45 80% 50%;
+    --mood-calm: 200 70% 45%;
+    --mood-stressed: 30 80% 55%;
+    --mood-lonely: 350 70% 60%;
+    --mood-anxious: 270 60% 55%;
+    --mood-neutral: 150 50% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-nunito antialiased;
+  }
+}
+
+@layer utilities {
+  .gradient-welcome {
+    background: var(--gradient-welcome);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+}
