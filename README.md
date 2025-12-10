@@ -1,7 +1,6 @@
 
 ## How can I edit this code?
 
-Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
